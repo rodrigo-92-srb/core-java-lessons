@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class SwitchExample {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -40,7 +41,8 @@ public class SwitchExample {
 			break;
 		}
 		default:
-			throw new IllegalArgumentException("Unexpected value: " + day);
+			System.out.println("Unexpected value: " + day);
+			break;
 		}
 		sc.close();
 	}
